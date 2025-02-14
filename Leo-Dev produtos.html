@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="">
+  <title>Leo-Dev produtos</title>
+  <link rel="icon" type="jpg" href="./lion.jpg">
+  <!-- Inclua o Swiper via CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <style>
+    /* Estilos personalizados */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: auto;
+      background-color: #f4f4f4;
+      background-image: url(tec.jpg);
+    }
+
+    .swiper-container {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .swiper-slide {
+      text-align: center;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .swiper-slide h3 {
+      margin: 10px 0;
+      font-size: 1.5em;
+    }
+
+    .swiper-slide p {
+      margin: 0;
+      font-size: 20px;
+      color: #2fab1e;
+    }
+
+    /* Estilo para os botões de navegação */
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #333;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 50%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+      background-color: rgba(255, 255, 255, 1);
+    }
+    img {
+      height: 150px;
+      width: 150px;
+      border-radius: 75px;
+    }
+    h1 {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="./lion.jpg" class="img-central">
+    <h1>Leo-Dev</h1>
+  </header>
+  <!-- Estrutura do Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="./tec2.jpg" alt="Produto 1">
+        <h3>Produto 1</h3>
+        <details>
+          <ul>
+            <li></li>
+            <li></li>
+          </ul>
+        </details>
+        <p>$ 25,00</p>
+      </div>
+      <div class="swiper-slide">
+        <img src="./tec3.jpg" alt="Produto 2">
+        <h3>Produto 2</h3>
+        <p>$ 50,00</p>
+      </div>
+      <div class="swiper-slide">
+        <img src="./tec4.jpg" alt="Produto 3">
+        <h3>Produto 3</h3>
+        <p>$ 87,00</p>
+      </div>
+      <div class="swiper-slide">
+        <img src="./tec5.jpg" alt="Produto 4">
+        <h3>Produto 4</h3>
+        <p>$ 540,00</p>
+      </div>
+      <!-- Adicione mais slides conforme necessário -->
+    </div>
+    <!-- Botões de navegação -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <!-- Paginação (opcional) -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Inclua o Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    // Inicialize o Swiper
+    const swiper = new Swiper('.swiper-container', {
+      loop: true, // Permite rolagem infinita
+      pagination: {
+        el: '.swiper-pagination', // Adiciona paginação (bolinhas)
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next', // Botão de próximo
+        prevEl: '.swiper-button-prev', // Botão de anterior
+      },
+      // Configurações para mouse e toque
+      grabCursor: true, // Muda o cursor para "mão" ao passar o mouse
+      touchEventsTarget: 'container', // Habilita gestos de toque
+    });
+  </script>
+</body>
+</html>

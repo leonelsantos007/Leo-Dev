@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="">
+  <link rel="icon" type="jpg" href="./lion.jpg">
+  <title>Leo-Dev</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      height: auto;
+      background-image: url(./tec5.jpg);
+    }
+    .container {
+      display: grid;
+      grid-gap: 5px;
+      grid-template-areas: "header header header header" "sidebar main main main" "sidebar photo photo nav" "footer footer footer footer";
+      color: #fff;
+    }
+    .header {
+      grid-area: header;
+      background: #575FAF;
+      padding: 1em;
+      border-radius: 20px;
+      animation: header 1s ease-in-out;
+    }
+    @keyframes header {
+      0% {
+        transform: translateY(-150px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+    }
+    .sidebar {
+      border-radius: 20px;
+      grid-area: sidebar;
+      background: #3445F7;
+      width: 180px;
+      animation: sidebar 2s ease-in-out;
+    }
+    @keyframes sidebar {
+      0% {
+        transform: translateX(-160px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0px);
+        opacity: 1;
+      }
+    }
+    .main {
+      grid-area: main;
+      background: #3445F7;
+      border-radius: 20px;
+      animation: main 4s ease-in-out;
+    }
+    @keyframes main {
+      0% {
+        transform: translateX(170px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0px);
+        opacity: 1;
+      }
+    }
+    .photo img {
+      grid-area: photo;
+      height: 300px;
+    }
+    .img1 {
+      border-radius: 20px;
+      animation: img1 4s ease-in-out;
+    }
+    @keyframes img1 {
+      0% {
+        transform: translate(-100px, 100px);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(0px);
+        opacity: 1;
+      }
+    }
+    .img2 {
+      border-radius: 20px;
+      animation: img2 4s ease-in-out;
+    }
+    @keyframes img2 {
+      0% {
+        transform: translate(100px, -100px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+    }
+    .footer {
+      grid-area: footer;
+      background: #3445F7;
+      border-radius: 20px;
+      animation: footer 5s ease-in-out;
+    }
+    @keyframes footer {
+      0% {
+        transform: translate(190px);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(0px);
+        opacity: 1;
+      }
+    }
+    .nav {
+      grid-area: nav;
+      color: #fff;
+      background: #3445f7;
+      width: 150px;
+      border-radius: 20px;
+      animation: nav 3s ease-in-out;
+    }
+    @keyframes nav {
+      0% {
+        transform: translate(50px, -50px);
+        opacity: 0;
+        border-radius: 100px;
+      }
+      100% {
+        transform: translate(0px);
+        opacity: 1;
+      }
+    }
+    header img {
+      height: 150px;
+      width: 150px;
+      border-radius: 75px;
+    }
+    header {
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="./lion.jpg">
+    <h1>Leo-Dev</h1>
+  </header>
+  <main>
+    <div class="container">
+      <div class="header">
+        <h3>Desenvolvedor web full-stack e Dev python</h3>
+      </div>
+      <div class="sidebar">
+        <h1>Sidebar</h1>
+      </div>
+      <div class="main">
+        <h1>Main</h1>
+      </div>
+      <div class="photo">
+        <img src="./tec4.jpg" class="img1">
+        <img src="./tec2.jpg" class="img2">
+      </div>
+      <div class="footer">
+        <h1>jdjdjdddndnx</h1>
+      </div>
+      <div class="nav">
+        <h1>Nav</h1>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
