@@ -1,0 +1,87 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url(food.jpg);
+}
+img {
+  height: 300px;
+  width: 300px;
+  border-radius: 150px;
+  border: solid 1px #FF4800B0;
+}
+h1 {
+  font-size: 40px;
+  color: #C2460CB0;
+  font-weight: bold;
+}
+form {
+  display: inline-block;
+  height: 530px;
+  width: auto;
+  border: none;
+  border-radius: 50px;
+  background-color: #FFFFFF9C;
+  backdrop-filter: blur(5px);
+  position: relative;
+}
+input {
+  width: 300px;
+  height: 55px;
+  border: solid 1px #F0CBA2;
+  border-radius: 16px;
+  background: transparent;
+  outline: none;
+  padding-left: 2em;
+  margin-top: 25px;
+  color: #c2460cb0;
+}
+input:focus, input:valid {
+  box-shadow: 3px 5px 4px #C2460CB0;
+  border-color: yellow;
+  border-top: transparent;
+}
+label {
+  position: absolute;
+  transform: translateX(-300px);
+  font-size: 18px;
+  pointer-events: none;
+  color: #c2460cb0;
+  transition: .3s;
+}
+.email-l {
+  top: 27.5%;
+}
+.senha-l {
+  top: 43%;
+}
+.email:focus~.email-l, .email:valid~.email-l {
+  top: 22.5%;
+  font-size: 11.5px;
+  border-radius: 20px;
+}
+.senha:focus~.senha-l, .senha:valid~.senha-l {
+  top: 38.5%;
+  font-size: 11.5px;
+  border-radius: 20px;
+}
+button {
+  height: 50px;
+  width: 280px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  border: none;
+  background: #FFA01B;
+  color: #fff;
+  font-size: 20px;
+}
+button:hover {
+  box-shadow: 5px 5px 4px #E78213;
+  background: #FFAE56;
+}
+a {
+  color: #ffa01b;
+}
