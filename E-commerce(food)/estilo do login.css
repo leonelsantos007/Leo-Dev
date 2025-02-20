@@ -51,6 +51,10 @@ label {
   color: #c2460cb0;
   transition: .3s;
 }
+.fas {
+  position: absolute;
+  transform: translateX(307px);
+}
 .email-l {
   top: 27.5%;
 }
@@ -84,4 +88,10 @@ button:hover {
 }
 a {
   color: #ffa01b;
+  text-decoration: none;
+}
+p {
+  position: absolute;
+  top: 30px;
+  transform: translateY(30px);
 }

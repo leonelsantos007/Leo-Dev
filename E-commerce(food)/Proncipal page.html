@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce com Menu Lateral</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(fundo-principal-food.jpg);
+        }
+
+        /* Estilo do cabeçalho */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+          float: right;
+        }
+
+        /* Ícone de menu (três barras) */
+        .menu-icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .menu-icon-ocultar {
+          position: absolute;
+          top: 20px;
+          transform: translateX(20px);
+          color: #fff;
+        }
+
+        /* Menu lateral */
+        .sidebar {
+            height: 100%;
+            width: auto;
+            position: fixed;
+            top: 0;
+            left: -350px; /* Esconde o menu inicialmente */
+            background-color: #222;
+            padding-top: 60px;
+            transition: left 0.3s ease;
+            z-index: 1;
+        }
+
+        .sidebar a, div {
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .sidebar a:hover {
+            background-color: #444444;
+        }
+
+        /* Conteúdo principal */
+        .content {
+            margin-left: 0;
+            padding: 20px;
+            color: #fff;
+        }
+
+        /* Quando o menu está aberto */
+        .sidebar.open {
+            left: 0;
+            width: 170px;
+        }
+
+        .content.shift {
+            margin-left: 250px;
+        }
+        .carrossel {
+      position: relative;
+      width: auto;
+      max-width: 800px;
+      overflow: hidden;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #fff;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .slide img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      position: auto;
+    }
+
+    .carrossel button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+      font-size: 18px;
+    }
+
+    .carrossel button:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    .carrossel h3 {
+      color: #000;
+    }
+
+    .anterior {
+      left: 10px;
+    }
+
+    .proximo {
+      right: 10px;
+    }
+    .preco { 
+      color: #2FAB1E;
+      font-size: 20px;
+    }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <h1>Meu E-Commerce</h1>
+    </header>
+
+    <!-- Menu Lateral -->
+    <div class="sidebar" id="sidebar">
+        <div class="menu-icon-ocular" onclick="ocultarMenu()">❌<i class="fas fa-times"></i></div>
+        <a href="#"><i class="fas fa-home"></i> Início</a>
+        <a href="#"><i class="fas fa-store"></i> Loja</a>
+        <a href="#"><i class="fas fa-box"></i> Produtos</a>
+        <a href="#"><i class="fas fa-shopping-cart"></i> Carrinho</a>
+        <a href="#"><i class="fas fa-envelope"></i> Contato</a>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <div class="content">
+        <h2>Bem-vindo ao nosso e-commerce!</h2>
+        <p>Explore nossos produtos e ofertas especiais.</p>
+    </div>
+    
+    
+    <div class="carrossel">
+    <div class="slides">
+      <div class="slide">
+        <img src="food.jpg" alt="Produto 1">
+        <h3>Produto 1</h3>
+        <p class="preco">R$ 50,00</p>
+      </div>
+      <div class="slide">
+        <img src="/Pessoal/tec2.jpg" alt="Produto 2">
+        <h3>Produto 2</h3>
+        <p class="preco">R$ 70,00</p>
+      </div>
+      <div class="slide">
+        <img src="/Pessoal/tec3.jpg" alt="Produto 3">
+        <h3>Produto 3</h3>
+        <p class="preco">R$ 90,00</p>
+      </div>
+      <div class="slide">
+        <img src="/Pessoal/tec4.jpg" alt="Produto 4">
+        <h3>Produto 4</h3>
+        <p class="preco">R$ 90,00</p>
+      </div>
+      <div class="slide">
+        <img src="/Pessoal/tec5.jpg" alt="Produto 5">
+        <h3>Produto 5</h3>
+        <p class="preco">R$ 90,00</p>
+      </div>
+      <div class="slide">
+        <img src="/Pessoal/tec2.jpg" alt="Produto 6">
+        <h3>Produto 6</h3>
+        <p class="preco">R$ 90,00</p>
+      </div>
+      <div class="slide">
+        <img src="/Pessoal/tec.jpg" alt="Produto 7">
+        <h3>Produto 7</h3>
+        <p class="preco">R$ 90,00</p>
+      </div>
+      <div class="slide">
+        <img src="/Pessoal/tec3.jpg" alt="Produto 8">
+        <h3>Produto 8</h3>
+        <p class="preco">R$ 90,00</p>
+      </div>
+      <div class="slide">
+        <img src="/Pessoal/tec4.jpg" alt="Produto 9">
+        <h3>Produto 9</h3>
+        <p class="preco">R$ 90,00</p>
+      </div>
+    </div>
+    <button class="anterior">&lt;</button>
+    <button class="proximo">&gt;</button>
+  </div>
+
+    <script>
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+        function ocultarMenu() {
+            const sidebar = document.getElementById('sidebar');
+            const content = document.getElementById('content');
+            sidebar.classList.toggle('open');
+            content.classList.toggle('shift');
+        }
+        const slides = document.querySelector('.slides');
+    const anteriorBtn = document.querySelector('.anterior');
+    const proximoBtn = document.querySelector('.proximo');
+    let slideIndex = 0;
+
+    proximoBtn.addEventListener('click', () => {
+      slideIndex = (slideIndex + 1) % slides.children.length;
+      slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+    });
+
+    anteriorBtn.addEventListener('click', () => {
+      slideIndex = (slideIndex - 1 + slides.children.length) % slides.children.length;
+      slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+    });
+    </script>
+
+</body>
+</html>
